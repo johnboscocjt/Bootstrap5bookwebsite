@@ -1,0 +1,35 @@
+//values should be like this for the overriding to work, follow the hierarchy below
+// custom variable 
+$primary: #c29938;
+$light: #fbf5e5;
+
+
+
+// import the functions & variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+/*
+// import the functions & variables method2
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "../node_modules/bootstrap/scss/_variables.scss";
+*/
+
+// custom theme colours
+$custom-theme-colors: (
+  "altlight": #f2ebfa,
+  "altdark": #522192
+);
+
+// merge the maps to add new theme colors, 2 maps to merge together,then assign to the theme colour variable
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
+//import bootstrap ,sass to control and overrride the css
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+/*
+// import bootstrap method 2
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+*/
+
